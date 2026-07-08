@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#d71920" />
+  <meta name="description" content="PWA-приложение для школы бокса: тренировки, тренеры, расписание и запись на пробное занятие." />
+  <title>Школа бокса | PWA</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container header-row">
+      <a class="brand" href="#home" aria-label="Главный экран">
+        <span class="brand-icon">🥊</span>
+        <span>
+          <b>Школа бокса</b>
+          <small>Тренировки и запись</small>
+        </span>
+      </a>
+
+      <button class="menu-button" id="menuButton" aria-label="Открыть меню">☰</button>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Главная</a>
+        <a href="#programs">Программы</a>
+        <a href="#coaches">Тренеры</a>
+        <a href="#schedule">Расписание</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#signup">Запись</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="badge">PWA-приложение для мобильного устройства</p>
+          <h1>Запишись на пробную тренировку по боксу</h1>
+          <p class="lead">
+            Выбирай тренера, уровень подготовки и удобное время. Приложение можно установить на телефон и использовать как обычное мобильное приложение.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#signup">Записаться</a>
+            <a class="btn secondary" href="#programs">Посмотреть программы</a>
+          </div>
+          <div class="stats">
+            <span><b>4</b><small>программы</small></span>
+            <span><b>3</b><small>тренера</small></span>
+            <span><b>6</b><small>дней в неделю</small></span>
+          </div>
+        </div>
+        <div class="phone-preview">
+          <div class="phone-card">
+            <div class="phone-top"></div>
+            <h3>Сегодня</h3>
+            <p>18:00 — техника удара</p>
+            <p>19:30 — группа новичков</p>
+            <div class="mini-card">🥊 Пробная тренировка бесплатно</div>
+            <div class="mini-card">⭐ Рейтинг тренеров 4.9</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="programs">
+      <div class="container">
+        <div class="section-head">
+          <p class="badge">Программы</p>
+          <h2>Выбор направления тренировки</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon">🥊</div>
+            <h3>Бокс для начинающих</h3>
+            <p>Базовая стойка, передвижение, защита, прямые удары и работа на лапах.</p>
+            <span class="tag">Новичкам</span>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔥</div>
+            <h3>Функциональная подготовка</h3>
+            <p>Развитие выносливости, силы, координации и скорости реакции.</p>
+            <span class="tag">Фитнес</span>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏆</div>
+            <h3>Спортивная группа</h3>
+            <p>Подготовка к спаррингам, соревнованиям и повышению уровня техники.</p>
+            <span class="tag">Продвинутым</span>
+          </article>
+          <article class="card">
+            <div class="card-icon">👤</div>
+            <h3>Индивидуальные занятия</h3>
+            <p>Персональная программа под цель: техника, похудение, форма, соревнования.</p>
+            <span class="tag">1 на 1</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="coaches">
+      <div class="container">
+        <div class="section-head">
+          <p class="badge">Тренеры</p>
+          <h2>Команда клуба</h2>
+        </div>
+        <div class="coach-grid">
+          <article class="coach">
+            <div class="avatar">АМ</div>
+            <h3>Алексей Морозов</h3>
+            <p>Тренер по боксу, опыт 9 лет. Новички и техника ударов.</p>
+            <small>Пн, Ср, Пт — вечер</small>
+          </article>
+          <article class="coach">
+            <div class="avatar">ИС</div>
+            <h3>Илья Соколов</h3>
+            <p>Функциональная подготовка, ОФП, работа на выносливость.</p>
+            <small>Вт, Чт — день</small>
+          </article>
+          <article class="coach">
+            <div class="avatar">МК</div>
+            <h3>Максим Климов</h3>
+            <p>Спортивная группа, спарринги и подготовка к турнирам.</p>
+            <small>Сб — утро</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-head">
+          <p class="badge">Расписание</p>
+          <h2>Ближайшие занятия</h2>
+        </div>
+        <div class="schedule">
+          <div class="schedule-row"><b>Понедельник</b><span>18:00</span><span>Бокс для начинающих</span></div>
+          <div class="schedule-row"><b>Вторник</b><span>19:00</span><span>Функциональная подготовка</span></div>
+          <div class="schedule-row"><b>Среда</b><span>18:00</span><span>Техника и лапы</span></div>
+          <div class="schedule-row"><b>Пятница</b><span>20:00</span><span>Спортивная группа</span></div>
+          <div class="schedule-row"><b>Суббота</b><span>12:00</span><span>Пробная тренировка</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <p class="badge">Отзывы</p>
+          <h2>Что говорят ученики</h2>
+        </div>
+        <div class="reviews">
+          <blockquote>“Удобно записываться, сразу видно расписание и тренера.” <b>— Данил</b></blockquote>
+          <blockquote>“После пробной тренировки остался в группе новичков.” <b>— Артём</b></blockquote>
+          <blockquote>“Приложение простое, всё понятно с телефона.” <b>— Игорь</b></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section signup-section" id="signup">
+      <div class="container signup-grid">
+        <div>
+          <p class="badge">Запись</p>
+          <h2>Записаться на пробную тренировку</h2>
+          <p>Заявка сохраняется в браузере и может быть отправлена на сервер после подключения PHP/MySQL.</p>
+        </div>
+        <form class="signup-form" id="signupForm">
+          <label>Имя
+            <input name="name" type="text" placeholder="Введите имя" required />
+          </label>
+          <label>Телефон
+            <input name="phone" type="tel" placeholder="+7 ___ ___ __ __" required />
+          </label>
+          <label>Направление
+            <select name="program">
+              <option>Бокс для начинающих</option>
+              <option>Функциональная подготовка</option>
+              <option>Индивидуальное занятие</option>
+              <option>Спортивная группа</option>
+            </select>
+          </label>
+          <button class="btn primary" type="submit">Отправить заявку</button>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© 2025 Школа бокса. Учебный PWA-проект.</p>
+      <p>Адрес: Москва, спортивный зал. Телефон: +7 900 000-00-00</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
