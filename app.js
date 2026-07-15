@@ -1,1 +1,21 @@
-const menuButton=document.getElementById("menuButton");const nav=document.getElementById("nav");if(menuButton){menuButton.addEventListener("click",()=>nav.classList.toggle("open"));}document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>nav.classList.remove("open")));const form=document.getElementById("signupForm");const msg=document.getElementById("formMessage");if(form){form.addEventListener("submit",(e)=>{e.preventDefault();const data=Object.fromEntries(new FormData(form).entries());const saved=JSON.parse(localStorage.getItem("boxingRequests")||"[]");saved.push({...data,date:new Date().toLocaleString("ru-RU")});localStorage.setItem("boxingRequests",JSON.stringify(saved));msg.textContent="Заявка сохранена. Администратор свяжется с вами.";form.reset();});}if("serviceWorker" in navigator){window.addEventListener("load",()=>{navigator.serviceWorker.register("sw.js").catch(console.error);});}
+if (
+  "serviceWorker" in navigator &&
+  (location.protocol === "http:" || location.protocol === "https:")
+) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then(registration => {
+        console.log(
+          "Service Worker зарегистрирован:",
+          registration.scope
+        );
+      })
+      .catch(error => {
+        console.error(
+          "Ошибка регистрации Service Worker:",
+          error
+        );
+      });
+  });
+}
